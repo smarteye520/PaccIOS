@@ -12,7 +12,7 @@ import LGSideMenuController
 import PassKit
 import Stripe
 
-class BaseViewController: UIViewController, NVActivityIndicatorViewable {
+class BaseViewController: UIViewController {
     let SupportedPaymentNetworks = [PKPaymentNetwork.visa, PKPaymentNetwork.masterCard, PKPaymentNetwork.amex]
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -75,11 +75,11 @@ class BaseViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     func showHUD() {
-        startAnimating(type: NVActivityIndicatorType.ballRotateChase, color: UIColor(red: 37/255, green: 132/255, blue: 63/255, alpha: 1), displayTimeThreshold: 0, minimumDisplayTime: 0)
+//        startAnimating(type: NVActivityIndicatorType.ballRotateChase, color: UIColor(red: 37/255, green: 132/255, blue: 63/255, alpha: 1), displayTimeThreshold: 0, minimumDisplayTime: 0)
     }
     
     func hideHUD() {
-        stopAnimating()
+//        stopAnimating()
     }
     
     func createToken(_ description: String, _ budget: String) {
